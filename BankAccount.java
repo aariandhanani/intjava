@@ -12,10 +12,10 @@ public class BankAccount {
     //Variables
     public String name;
     public int accountNumber;
-    public int accountNumber2 = 1;
+    public int accountNumber2 = 1; //for 2nd account-found it easier to do it this way
     public int type;
     public int balance;
-    public int balance2;
+    public int balance2; //for 2nd account
     public String typeName;
 
     //Set up

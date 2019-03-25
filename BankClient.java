@@ -14,6 +14,8 @@ public class BankClient
         int open = 1;
         int interest = 0;
         BankAccount bankAccount1 = new BankAccount();
+        BankAccount bankAccount2 = new BankAccount();
+
         bankAccount1.RunProgram();
         while (open == 1)
         {
