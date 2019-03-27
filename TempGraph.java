@@ -36,6 +36,6 @@ public class TempGraph {
     {
         gc.setLineWidth( 3 );
         gc.setFill( Color.LIGHTSKYBLUE ); // body
-        gc.fillRect(sX, sY, 100, height);
+        gc.fillRect(sX, sY, 50, height);
     }
 }
