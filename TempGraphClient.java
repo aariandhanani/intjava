@@ -10,22 +10,22 @@ public class TempGraphClient extends Application
     @Override
     public void start( Stage stage )
     {
-        GraphicsContext gc = JIGraphicsUtility.setUpGraphics(stage, "Sprites", 1200, 400 );
-        m1 = new TempGraph( ).setCoordinates( 10, 200).setHeight(200);
-        m2 = new TempGraph( ).setCoordinates( 110, 390 ).setHeight(10);
-        m3 = new TempGraph( ).setCoordinates( 210, 380 ).setHeight(20);
-        m4 = new TempGraph( ).setCoordinates( 310, 360 ).setHeight(40);
-        m5 = new TempGraph( ).setCoordinates( 410, 340 ).setHeight(60);
-        m6 = new TempGraph( ).setCoordinates( 510, 320 ).setHeight(80);
-        m7 = new TempGraph( ).setCoordinates( 610, 300 ).setHeight(100);
-        m8 = new TempGraph( ).setCoordinates( 710, 280 ).setHeight(120);
-        m9 = new TempGraph( ).setCoordinates( 810, 260 ).setHeight(140);
-        m10 = new TempGraph( ).setCoordinates( 910, 240 ).setHeight(160);
-        m11 = new TempGraph( ).setCoordinates( 1010, 220 ).setHeight(180);
-        m12 = new TempGraph( ).setCoordinates( 1110, 200 ).setHeight(200);
+        GraphicsContext gc = JIGraphicsUtility.setUpGraphics(stage, "Temperature Graph", 1200, 400 );
+        m1 = new TempGraph( ).setCoordinates( 10, 369).setHeight(31).setMonth("Jan");
+        m2 = new TempGraph( ).setCoordinates( 110, 376 ).setHeight(24).setMonth("Feb");
+        m3 = new TempGraph( ).setCoordinates( 210, 355 ).setHeight(45).setMonth("Mar");
+        m4 = new TempGraph( ).setCoordinates( 310, 340 ).setHeight(60).setMonth("Apr");
+        m5 = new TempGraph( ).setCoordinates( 410, 331 ).setHeight(69).setMonth("May");
+        m6 = new TempGraph( ).setCoordinates( 510, 320 ).setHeight(80).setMonth("Jun");
+        m7 = new TempGraph( ).setCoordinates( 610, 312 ).setHeight(88).setMonth("Jul");
+        m8 = new TempGraph( ).setCoordinates( 710, 313 ).setHeight(87).setMonth("Aug");
+        m9 = new TempGraph( ).setCoordinates( 810, 325 ).setHeight(75).setMonth("Sep");
+        m10 = new TempGraph( ).setCoordinates( 910, 335 ).setHeight(65).setMonth("Oct");
+        m11 = new TempGraph( ).setCoordinates( 1010, 357 ).setHeight(43).setMonth("Nov");
+        m12 = new TempGraph( ).setCoordinates( 1110, 377 ).setHeight(23).setMonth("Dec");
 
 
-        //400 - x
+        //400 - x is the formula for the y axis
 
         m1.draw( gc );
         m2.draw( gc );
