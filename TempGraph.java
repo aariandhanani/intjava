@@ -40,19 +40,18 @@ public class TempGraph {
         return this;
     }
 
-
     public void draw( GraphicsContext gc )
     {
         gc.setLineWidth( 3 );
-        if (height < 46)
+        if (height <= 46)
         {
             gc.setFill( Color.LIGHTSKYBLUE );
         }
-        if (height > 47 && height < 78)
+        if (height > 46 && height <= 78)
         {
             gc.setFill( Color.YELLOW );
         }
-        if (height > 79)
+        if (height > 78)
         {
             gc.setFill( Color.INDIANRED );
         }
