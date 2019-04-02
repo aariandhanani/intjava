@@ -13,9 +13,6 @@ import java.util.*;
 public class TempGraphClient extends Application
 {
     private TempGraph m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12;
-
-    private TempGraph jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec;
-
     @Override
     public void start( Stage stage )
     {
@@ -29,28 +26,53 @@ public class TempGraphClient extends Application
         int sum = 0;
         int max = -1000000;
         int min = 1000000;
+        String maxText = "";
+        String minText = "";
+        int temporary = 0;
+
         for ( int i = 0; i < 12; i++ ) {
             String monthName = months1[i];
             System.out.println("Please enter the temperature for " + monthName);
 
-            arrayMonths[i] = scan.nextInt();
+            while (!scan.hasNextInt())
+            {
+                System.out.println("Please enter a valid integer");
+                scan.next();
+            }
 
-//            if (arrayMonths[i] )
+            temporary = scan.nextInt();
+            if (temporary > 0 && temporary<125)
+            {
+                arrayMonths[i] = temporary;
+            }
+
+            while ((temporary < 0 || temporary > 125))
+            {
+                while (scan.hasNextInt())
+                {
+                    System.out.println("Please enter a valid integer");
+                    scan.next();
+                }
+                System.out.println("Please enter a valid integer");
+                scan.next();
+            }
 
             sum = sum + arrayMonths[i];
             if(arrayMonths[i]>max)
             {
                 max = arrayMonths[i];
+                maxText = monthName;
             }
             if(arrayMonths[i] < min)
             {
                 min = arrayMonths[i];
+                minText = monthName;
             }
         }
         int average = sum/12;
-        String averageDisplay = "The average is: " + average;
-        String minDisplay ="The minimum is: " + min;
-        String maxDisplay ="The maximum is: " + max;
+        String averageDisplay = "The average temperature was: " + average;
+        String minDisplay = "The lowest temperature was in " +minText+ " and was: " + min;
+        String maxDisplay = "The highest temperature was in " +maxText+ " and was: " + max;
 
 
         GraphicsContext gc = JIGraphicsUtility.setUpGraphics(stage, "Temperature Graph", 1200, 600 );
