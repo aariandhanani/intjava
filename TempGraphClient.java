@@ -45,17 +45,27 @@ public class TempGraphClient extends Application
             {
                 arrayMonths[i] = temporary;
             }
-
-            while ((temporary < 0 || temporary > 125))
+            else
             {
-                while (scan.hasNextInt())
+                while (temporary < 0 && temporary > 125)
                 {
-                    System.out.println("Please enter a valid integer");
-                    scan.next();
+                    if (!scan.hasNextInt())
+                    {
+                        System.out.println("Please enter a valid integer");
+                        scan.next();
+                    }
+                    else if (temporary < 0 && temporary > 125)
+                    {
+                        System.out.println("Please enter a valid integer");
+                        scan.next();
+                    }
+                    else
+                    {
+                        arrayMonths[i] = temporary;
+                    }
                 }
-                System.out.println("Please enter a valid integer");
-                scan.next();
             }
+
 
             sum = sum + arrayMonths[i];
             if(arrayMonths[i]>max)
