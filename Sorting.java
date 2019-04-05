@@ -50,16 +50,20 @@ public class Sorting {
     public static void BubbleSort(int[] arrays)
     {
         int n = arrays.length;
-        int temp = 0;
+        
+        int temporary = 0;
+
         for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++)
+            for (int arrays1 = 1; arrays1 < (n - i); arrays1++)
             {
-                if (arrays[j - 1] > arrays[j])
+                if (arrays[arrays1 - 1] > arrays[arrays1])
                 {
 
-                    temp = arrays[j - 1];
-                    arrays[j - 1] = arrays[j];
-                    arrays[j] = temp;
+                    temporary = arrays[arrays1 - 1];
+
+                    arrays[arrays1 - 1] = arrays[arrays1];
+
+                    arrays[arrays1] = temporary;
                 }
             }
         }
