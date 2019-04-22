@@ -1,11 +1,21 @@
 package com.suarez;
+
+
 import java.lang.*;
+import java.util.ArrayList;
 
 public class Auto {
+
     public static String carWords;
     private String model;
     private int milesDriven;
     private double gallonsOfGas;
+    private ArrayList<Auto> carList;
+
+    public void initialize( )
+    {
+        carList = new ArrayList<Auto>( );
+    }
 
     public Auto() {
         model = "unkown";
@@ -76,4 +86,33 @@ public class Auto {
             }
         }
     }
+    public void fillWithCars( )
+    {
+        initialize();
+
+        Auto car1 = new Auto( "BMW", 0, 0.0 );
+        Auto car2 = new Auto( "Ferrari", 100, 500.0 );
+        Auto car3 = new Auto( "Jeep", 1000, 90.0 );
+        Auto car4 = new Auto( "Ferrari", 10, 3.0 );
+        Auto car5 = new Auto( "BMW", 4000, 200.0 );
+        Auto car6 = new Auto( "Ferrari", 1000, 50.0 );
+
+        carList.add( car1 );
+        carList.add( car2 );
+        carList.add( car3 );
+        carList.add( car4 );
+        carList.add( car5 );
+        carList.add( car6 );
+    }
+    public void carListWords()
+    {
+        fillWithCars();
+        String words = "";
+        for ( Auto x: carList){
+            words = carList.toString() + " ";
+        }
+        System.out.println(words);
+    }
+
+
 }
