@@ -17,18 +17,19 @@ public class FileReader {
         }
 
         //part 1
-        String words = "";
+        String words1 = "";
 
         for ( String x: list)
         {
-            words = list.toString() + " ";
+            words1 = list.toString() + " ";
         }
-        System.out.println(words);
+        System.out.println(words1);
 
         //part 2
 
         Collections.reverse(list);
 
+        String words = "";
         words = "";
 
         for ( String x: list)
@@ -36,6 +37,26 @@ public class FileReader {
             words = list.toString() + " ";
         }
         System.out.println(words);
+
+        //part 3
+
+        Collections.reverse(list);
+
+
+        Scanner scan2 = new Scanner(new File("/Users/aariandhanani/IdeaProjects/intJava/src/words.txt"));
+
+        String words2 = "";
+
+        for ( String x: list)
+        {
+            words2 += x.toUpperCase()+"S ";
+        }
+        System.out.println(words2);
+
+
+        System.out.println(words1);
+
+
 
 
 
