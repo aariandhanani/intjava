@@ -5,7 +5,7 @@ import java.util.*;
 
 public class numberReader {
     public static void main(String [] Args) throws FileNotFoundException {
-        ArrayList<String> list = new ArrayList<String>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
         Scanner scan = new Scanner(new File("/Users/aariandhanani/IdeaProjects/intJava/src/numbers"));
 
@@ -13,31 +13,27 @@ public class numberReader {
         int numberOfNumbers = 0;
         int max = -10000000;
         int min = 1000000000;
-        int temporary = 0;
+        int temporary;
+        String words = "";
+
         while(scan.hasNext())
         {
             temporary = scan.nextInt();
-            list.add(scan.next());
-            sum = sum + scan.nextInt();
+            list.add(temporary);
+            sum = sum + temporary;
             numberOfNumbers++;
-            if (scan.nextInt() > max)
+            if (temporary > max)
             {
-                max = scan.nextInt();
+                max = temporary;
             }
-            if (scan.nextInt() < min)
+            if (temporary < min)
             {
-                min = scan.nextInt();
+                min = temporary;
             }
+            words = words + temporary + " ";
         }
 
-        //part 1
-        String words = "";
-
-        for ( String x: list)
-        {
-            words = list.toString() + " ";
-        }
-        System.out.println(words);
+        System.out.println("All numbers: " + words);
 
         //part 2
         int average = sum/numberOfNumbers;
@@ -53,15 +49,15 @@ public class numberReader {
 
         Scanner scan2 = new Scanner(new File("/Users/aariandhanani/IdeaProjects/intJava/src/numbers"));
 
-        while(scan.hasNext())
+        while(scan2.hasNext())
         {
-            if (scan.nextInt() % 2 == 0) {
-                words = list.toString() + " ";
+            temporary = scan2.nextInt();
+            if (temporary % 2 == 1)
+            {
+                words = words + temporary + " ";
             }
         }
 
-        System.out.println("Without even numbers is: " +words);
-
-
+        System.out.println("Even numbers: " + words);
     }
 }

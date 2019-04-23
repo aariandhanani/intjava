@@ -55,10 +55,5 @@ public class FileReader {
 
 
         System.out.println(words1);
-
-
-
-
-
     }
 }
