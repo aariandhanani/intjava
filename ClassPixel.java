@@ -8,7 +8,7 @@ public class ClassPixel
 
 
 
-    public Pixel[][][] generatePixelArray(int[][]reds1, int[][] greens1, int[][]blues1)
+    public int[][][] generatePixelArray(int[][]reds1, int[][] greens1, int[][]blues1)
     {
         int colors[][][] = {{{findNumber(reds, 0, 0),findNumber(reds, 0, 1)}, {findNumber(reds, 1, 0),findNumber(reds, 1, 1)}},{{findNumber(greens, 0, 0),findNumber(greens, 0, 1)}, {findNumber(greens, 1, 0),findNumber(greens, 1, 1)}}, {{findNumber(blues, 0, 0),findNumber(blues, 0, 1)}, {findNumber(blues, 1, 0),findNumber(blues, 1, 1)}}};
         return colors;
