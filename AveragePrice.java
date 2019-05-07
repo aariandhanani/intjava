@@ -13,15 +13,16 @@ public class AveragePrice
         while (input1.hasNextLine())
         {
             String line = input1.nextLine();
-            Scanner lineBreak = new Scanner(line);
-            String product = lineBreak.next();
+            Scanner line1 = new Scanner(line);
+            String product = line1.next();
             double total = 0;
             int count = 0;
-            while(lineBreak.hasNextDouble())
+            while(line1.hasNextDouble())
             {
-                total = total + lineBreak.nextDouble();
+                total = total + line1.nextDouble();
                 count++;
             }
+            System.out.println("Average price of " + product + ": " + total/count);
         }
     }
 }
