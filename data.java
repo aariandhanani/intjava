@@ -20,6 +20,7 @@ public class data
                 System.out.println(file.next());
                 count++;
             }
+            file.close();
         }
         catch ( IOException ioe )
         {
