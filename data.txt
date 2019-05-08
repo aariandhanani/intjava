@@ -1,0 +1,7 @@
+Fish
+10
+Beef
+5
+Chicken
+Vegetable
+90

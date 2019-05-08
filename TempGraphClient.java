@@ -127,24 +127,3 @@ public class TempGraphClient extends Application
         launch( args );
     }
 }
-
-//        System.out.println(average);
-//        String str2 = "The Average is: " + average;
-//        gc.fillText(str2, 590, 450);
-
-
-
-//        GraphicsContext gc = JIGraphicsUtility.setUpGraphics(stage, "Temperature Graph", 1200, 600 );
-//        m1 = new TempGraph( ).setCoordinates( 10, 369).setHeight(31).setMonth("Jan");
-//        m2 = new TempGraph( ).setCoordinates( 110, 376 ).setHeight(24).setMonth("Feb");
-//        m3 = new TempGraph( ).setCoordinates( 210, 355 ).setHeight(45).setMonth("Mar");
-//        m4 = new TempGraph( ).setCoordinates( 310, 340 ).setHeight(60).setMonth("Apr");
-//        m5 = new TempGraph( ).setCoordinates( 410, 331 ).setHeight(69).setMonth("May");
-//        m6 = new TempGraph( ).setCoordinates( 510, 320 ).setHeight(80).setMonth("Jun");
-//        m7 = new TempGraph( ).setCoordinates( 610, 312 ).setHeight(88).setMonth("Jul");
-//        m8 = new TempGraph( ).setCoordinates( 710, 313 ).setHeight(87).setMonth("Aug");
-//        m9 = new TempGraph( ).setCoordinates( 810, 325 ).setHeight(75).setMonth("Sep");
-//        m10 = new TempGraph( ).setCoordinates( 910, 335 ).setHeight(65).setMonth("Oct");
-//        m11 = new TempGraph( ).setCoordinates( 1010, 357 ).setHeight(43).setMonth("Nov");
-//        m12 = new TempGraph( ).setCoordinates( 1110, 377 ).setHeight(23).setMonth("Dec");
-//        gc.fillRect(0, 400, 1200, 2);

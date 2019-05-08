@@ -1,9 +1,9 @@
 package com.suarez;
 
 public class Marketer extends Employee{
-    public Marketer (int yearNumber)
+    public Marketer (int years)
     {
-        super(yearNumber);
+        super(years);
     }
     public double getSalary()
     {
@@ -12,5 +12,9 @@ public class Marketer extends Employee{
     public void advertise(String text)
     {
         System.out.println("I can advertise");
+    }
+    public int getVacationDays()
+    {
+        return super.getVacationDays();
     }
 }

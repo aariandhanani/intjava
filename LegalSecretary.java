@@ -1,9 +1,9 @@
 package com.suarez;
 
 public class LegalSecretary extends Employee{
-    public LegalSecretary (int yearNumber)
+    public LegalSecretary (int years)
     {
-        super(yearNumber);
+        super(years);
     }
     public double getSalary()
     {
@@ -12,5 +12,9 @@ public class LegalSecretary extends Employee{
     public void fileLegalBriefs(String text)
     {
         System.out.println("Legal Document: " + text);
+    }
+    public int getVacationDays()
+    {
+        return super.getVacationDays();
     }
 }

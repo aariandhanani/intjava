@@ -1,25 +1,41 @@
 package com.suarez;
 
 public class Employee {
-    private int yearNumber;
-    public Employee(int years)
+
+    private int years;
+
+    public Employee(int initialYears)
     {
-        yearNumber = years;
+        years = initialYears;
     }
+
     public int getHours()
     {
         return 40;
     }
+
     public double getSalary()
     {
-        return 40000.0;
+        return 50000.0;
     }
+
     public int getVacationDays()
     {
-        return 2 * yearNumber + 10;
+        return getSeniorityBonus() + 10;
     }
+
     public String getVacationForm()
     {
         return "yellow";
+    }
+
+    public int getSeniorityBonus()
+    {
+        return 2 * years;
+    }
+
+    public int getyears()
+    {
+        return years;
     }
 }

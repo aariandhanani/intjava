@@ -3,9 +3,9 @@ package com.suarez;
 import java.util.Scanner;
 
 public class Lawyer extends Employee {
-    public Lawyer (int yearNumber)
+    public Lawyer (int years)
     {
-        super(yearNumber);
+        super(years);
     }
     public void howToSue(String text)
     {
